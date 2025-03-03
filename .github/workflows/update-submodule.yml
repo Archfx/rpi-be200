@@ -17,9 +17,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update Submodule
-        run: |
-          git submodule update --remote --merge --allow-unrelated-histories
-          git commit -am "Automated submodule update"
+        run: |              
+          git submodule update --remote --force
+          git add be200 
+          git commit -m "Automated submodule update"
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
