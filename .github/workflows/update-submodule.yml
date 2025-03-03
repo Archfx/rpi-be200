@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git submodule update --remote --merge --allow-unrelated-histories
+          git submodule update --remote --force
           git commit -am "Automated submodule update"
           git push origin main
         env:
